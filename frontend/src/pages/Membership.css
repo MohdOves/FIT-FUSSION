@@ -1,0 +1,271 @@
+.membership-container {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f9fafb;
+}
+
+.membership-hero {
+  background: url('/public/membership.jpeg') rgba(0, 0, 0, 0.75);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+
+
+
+.membership-hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease;
+}
+
+.membership-hero p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  animation: fadeInUp 1s ease;
+}
+
+.membership-section {
+  padding: 7rem 2rem;
+  position: relative;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.membership-section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.membership-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+  border-radius: 2px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+}
+
+.plan-card.featured {
+  border: 2px solid #0095ff;
+}
+
+.featured-tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #0095ff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+.plan-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.plan-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.plan-card:hover .plan-image img {
+  transform: scale(1.05);
+}
+
+.plan-details {
+  padding: 2rem;
+}
+
+.plan-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.price {
+  font-size: 2.5rem;
+  color: #0095ff;
+  margin-bottom: 1.5rem;
+}
+
+.price span {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.plan-details ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.plan-details ul li {
+  padding: 0.8rem 0;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
+
+.join-button {
+  width: 100%;
+  padding: 1rem;
+  background: #0095ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.join-button:hover {
+  background: #0077cc;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.benefit-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+}
+
+.benefit-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.benefit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.benefit-card:hover .benefit-image img {
+  transform: scale(1.05);
+}
+
+.benefit-card h3 {
+  padding: 1.5rem 1.5rem 0.5rem;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.benefit-card p {
+  padding: 0 1.5rem 1.5rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .membership-hero {
+    height: 60vh;
+  }
+
+  .membership-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .membership-hero p {
+    font-size: 1.4rem;
+  }
+
+  .membership-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .membership-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .plans-grid, .benefits-grid {
+    gap: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .membership-container {
+    background-color: #1a1a1a;
+  }
+
+  .plan-card, .benefit-card {
+    background: #2d2d2d;
+  }
+
+  .plan-details h3, .benefit-card h3 {
+    color: #f9fafb;
+  }
+
+  .plan-details ul li {
+    border-bottom-color: #444;
+    color: #ddd;
+  }
+
+  .benefit-card p {
+    color: #ddd;
+  }
+
+  .membership-section h2 {
+    color: #f9fafb;
+  }
+} 
