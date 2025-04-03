@@ -36,7 +36,7 @@ const Blog = () => {
       category: "training",
       date: "March 10, 2024",
       author: "Mike Johnson",
-      image: "difftrainStyle.jpeg",
+      image: "diffTrainStyle.jpeg",
       excerpt: "From HIIT to strength training, learn about different training styles and which one might be right for you...",
       readTime: "6 min read",
       
