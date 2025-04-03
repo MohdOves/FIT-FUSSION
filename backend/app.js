@@ -1,23 +1,38 @@
-import express from "express";
 import { config } from "dotenv";
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load environment variables first
+config({ path: path.join(__dirname, "./config.env") });
+
+import express from "express";
 import cors from "cors";
 import { sendEmail } from "./utils/sendEmail.js";
+import paymentRoutes from "./routes/payment.js";
 
 const app = express();
 const router = express.Router();
 
-config({ path: "./config.env" });
+// Log the frontend URL for debugging
+console.log('Frontend URL:', process.env.FRONTEND_URL);
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
-    methods: ["POST"],
+    origin: [process.env.FRONTEND_URL, "http://localhost:5173"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
 );
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Payment routes
+app.use("/api/payment", paymentRoutes);
 
 router.post("/send/mail", async (req, res, next) => {
   const { name, email, message } = req.body;
