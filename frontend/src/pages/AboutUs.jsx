@@ -20,7 +20,7 @@ const AboutUs = () => {
             a community of passionate fitness enthusiasts and dedicated professionals.
           </p>
           <div className="image-placeholder">
-            <img src="/public/images.jpeg" alt="gym Member" />
+            <img src="images.jpeg" alt="gym Member" />
             
           </div>
         </div>
@@ -58,7 +58,7 @@ const AboutUs = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image">
-                <img src="/public/john.jpeg" alt="" />
+                <img src="john.jpeg" alt="" />
                 <p>Team Member Image</p>
               </div>
               <h3>John Doe</h3>
@@ -66,7 +66,7 @@ const AboutUs = () => {
             </div>
             <div className="team-member">
               <div className="member-image">
-                <img src="/public/jahn.jpeg" alt="" />
+                <img src="jahn.jpeg" alt="" />
                 <p>Team Member Image</p>
               </div>
               <h3>Jane Smith</h3>
@@ -84,21 +84,21 @@ const AboutUs = () => {
           <div className="facilities-grid">
             <div className="facility">
               <div className="facility-image">
-                <img src="/public/State-of-the-art Equipment.jpeg" alt="State-of-the-art Equipment" />
+                <img src="State-of-the-art Equipment.jpeg" alt="State-of-the-art Equipment" />
                 <p>Facility Image</p>
               </div>
               <h3>State-of-the-art Equipment</h3>
             </div>
             <div className="facility">
               <div className="facility-image">
-                <img src="/public/cardio.jpeg" alt="Cardio Zone" />
+                <img src="cardio.jpeg" alt="Cardio Zone" />
                 <p>Facility Image</p>
               </div>
               <h3>Cardio Zone</h3>
             </div>
             <div className="facility">
               <div className="facility-image">
-                <img src="/public/personalarea.jpeg" alt="Personal Training Area" />
+                <img src="personalarea.jpeg" alt="Personal Training Area" />
                 <p>Facility Image</p>
               </div>
               <h3>Personal Training Area</h3>

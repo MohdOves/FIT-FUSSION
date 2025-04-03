@@ -12,7 +12,7 @@ const Blog = () => {
       category: "fitness",
       date: "March 15, 2024",
       author: "John Doe",
-      image: "/public/tips.jpeg",
+      image: "tips.jpeg",
       excerpt: "Starting your fitness journey can be overwhelming. Here are 10 essential tips to help you get started on the right foot...",
       readTime: "5 min read",
       
@@ -24,7 +24,7 @@ const Blog = () => {
       category: "nutrition",
       date: "March 12, 2024",
       author: "Jane Smith",
-      image: "/public/NutritionGuide.jpeg",
+      image: "NutritionGuide.jpeg",
       excerpt: "What you eat before and after your workout is crucial for optimal performance and recovery...",
       readTime: "7 min read",
      
@@ -36,7 +36,7 @@ const Blog = () => {
       category: "training",
       date: "March 10, 2024",
       author: "Mike Johnson",
-      image: "/public/difftrainStyle.jpeg",
+      image: "difftrainStyle.jpeg",
       excerpt: "From HIIT to strength training, learn about different training styles and which one might be right for you...",
       readTime: "6 min read",
       

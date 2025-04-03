@@ -19,7 +19,7 @@ const Membership = () => {
             {/* Basic Plan */}
             <div className="plan-card">
               <div className="plan-image">
-                <img src="/public/basic.jpeg" alt="Basic Plan" />
+                <img src="basic.jpeg" alt="Basic Plan" />
               </div>
               <div className="plan-details">
                 <h3>Basic Plan</h3>
@@ -41,7 +41,7 @@ const Membership = () => {
             <div className="plan-card featured">
               <div className="featured-tag">Most Popular</div>
               <div className="plan-image">
-                <img src="/public/premium.jpeg" alt="Premium Plan" />
+                <img src="premium.jpeg" alt="Premium Plan" />
               </div>
               <div className="plan-details">
                 <h3>Premium Plan</h3>
@@ -62,7 +62,7 @@ const Membership = () => {
             {/* Elite Plan */}
             <div className="plan-card">
               <div className="plan-image">
-                <img src="/public/elite.jpeg" alt="Elite Plan" />
+                <img src="elite.jpeg" alt="Elite Plan" />
               </div>
               <div className="plan-details">
                 <h3>Elite Plan</h3>
@@ -91,7 +91,7 @@ const Membership = () => {
             <div className="benefit-card">
               <div className="benefit-image">
                 <img
-                  src="/public/State-of-the-art Equipment.jpeg"
+                  src="State-of-the-art Equipment.jpeg"
                   alt="Modern Equipment"
                 />
               </div>
@@ -100,14 +100,14 @@ const Membership = () => {
             </div>
             <div className="benefit-card">
               <div className="benefit-image">
-                <img src="/public/gymMemeber.jpeg" alt="Expert Trainers" />
+                <img src="gymMemeber.jpeg" alt="Expert Trainers" />
               </div>
               <h3>Expert Trainers</h3>
               <p>Professional guidance from certified fitness experts</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-image">
-                <img src="/public/yoga session.jpeg" alt="Group Classes" />
+                <img src="yoga session.jpeg" alt="Group Classes" />
               </div>
               <h3>Group Classes</h3>
               <p>Diverse range of energizing group fitness sessions</p>

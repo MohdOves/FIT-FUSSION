@@ -9,21 +9,21 @@ const Galler = () => {
     {
       id: 1,
       category: 'gym',
-      image: '/public/workoutarea.jpeg',
+      image: 'workoutarea.jpeg',
       title: 'Main Workout Area',
       description: 'State-of-the-art equipment'
     },
     {
       id: 2,
       category: 'classes',
-      image: '/public/yoga session.jpeg',
+      image: 'yoga session.jpeg',
       title: 'Yoga Session',
       description: 'Morning yoga class'
     },
     {
       id: 3,
       category: 'training',
-      image: '/public/personalarea.jpeg',
+      image: 'personalarea.jpeg',
       title: 'Personal Training',
       description: 'One-on-one training session'
     },
