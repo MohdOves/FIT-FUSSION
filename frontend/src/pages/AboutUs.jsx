@@ -20,7 +20,7 @@ const AboutUs = () => {
             a community of passionate fitness enthusiasts and dedicated professionals.
           </p>
           <div className="image-placeholder">
-            <img src="images.jpeg" alt="gym Member" />
+            <img src="team.jpg" alt="gym Member" />
             
           </div>
         </div>
@@ -58,12 +58,21 @@ const AboutUs = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image">
-                <img src="john.jpeg" alt="" />
+                <img src="ovesimage.jpg" alt="" />
                 <p>Team Member Image</p>
               </div>
-              <h3>John Doe</h3>
+              <h3>Oves</h3>
+              <p>CEO and Founder</p>
+            </div>
+            <div className="team-member">
+              <div className="member-image">
+                <img src="shehjaan.jpg" alt="" />
+                <p>Team Member Image</p>
+              </div>
+              <h3>Shehjaan</h3>
               <p>Head Trainer</p>
             </div>
+            
             <div className="team-member">
               <div className="member-image">
                 <img src="jahn.jpeg" alt="" />
@@ -72,6 +81,23 @@ const AboutUs = () => {
               <h3>Jane Smith</h3>
               <p>Nutrition Specialist</p>
             </div>
+            <div className="team-member">
+              <div className="member-image">
+                <img src="nikhil.jpg" alt="" />
+                <p>Team Member Image</p>
+              </div>
+              <h3>Nikhil</h3>
+              <p>Head Trainer</p>
+            </div>
+            <div className="team-member">
+              <div className="member-image">
+                <img src="john.jpeg" alt="" />
+                <p>Team Member Image</p>
+              </div>
+              <h3>John Doe</h3>
+              <p>Head Trainer</p>
+            </div>
+            
             {/* Add more team members as needed */}
           </div>
         </div>

@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Membership.css";
 import { Check } from "lucide-react";
+import Payment from "../components/Payment";
 
 const Membership = () => {
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [showPayment, setShowPayment] = useState(false);
+
+  const handleJoinNow = (plan) => {
+    setSelectedPlan(plan);
+    setShowPayment(true);
+  };
+
+  const handlePaymentComplete = () => {
+    setShowPayment(false);
+    setSelectedPlan(null);
+    // You can add additional logic here, like showing a success message
+    alert("Payment successful! Welcome to FIT FUSSION!");
+  };
+
+  const handlePaymentError = (error) => {
+    console.error('Payment error:', error);
+    // You can add additional logic here, like showing an error message
+  };
+
   return (
     <div className="membership-container">
       {/* Hero Section */}
       <div className="membership-hero">
-        <h1>Elite Edge Membership</h1>
+        <h1>Fit Fussion Memberships</h1>
         <p>Transform Your Life with Our Premium Plans</p>
       </div>
 
@@ -33,7 +54,16 @@ const Membership = () => {
                   <li>24/7 Skilled Support</li>
                   <li>20 Days Freezing Support</li>
                 </ul>
-                <button className="join-button">Join Now</button>
+                <button 
+                  className="join-button"
+                  onClick={() => handleJoinNow({
+                    name: "Basic Plan",
+                    amount: 3499,
+                    duration: "3 months"
+                  })}
+                >
+                  Join Now
+                </button>
               </div>
             </div>
 
@@ -55,7 +85,16 @@ const Membership = () => {
                   <li>24/7 Skilled Support</li>
                   <li>20 Days Freezing Support</li>
                 </ul>
-                <button className="join-button">Join Now</button>
+                <button 
+                  className="join-button"
+                  onClick={() => handleJoinNow({
+                    name: "Premium Plan",
+                    amount: 5999,
+                    duration: "6 months"
+                  })}
+                >
+                  Join Now
+                </button>
               </div>
             </div>
 
@@ -76,7 +115,16 @@ const Membership = () => {
                   <li>24/7 Skilled Support</li>
                   <li>20 Days Freezing Support</li>
                 </ul>
-                <button className="join-button">Join Now</button>
+                <button 
+                  className="join-button"
+                  onClick={() => handleJoinNow({
+                    name: "Elite Plan",
+                    amount: 9999,
+                    duration: "1 Year"
+                  })}
+                >
+                  Join Now
+                </button>
               </div>
             </div>
           </div>
@@ -115,6 +163,29 @@ const Membership = () => {
           </div>
         </div>
       </section>
+
+      {/* Payment Modal */}
+      {showPayment && selectedPlan && (
+        <div className="payment-modal">
+          <div className="payment-modal-content">
+            <h2>Complete Your {selectedPlan.name} Purchase</h2>
+            <p>Amount: Rs{selectedPlan.amount} for {selectedPlan.duration}</p>
+            <Payment 
+              amount={selectedPlan.amount} 
+              membershipType={selectedPlan.name}
+              userId="user123" // You can replace this with actual user ID when you have authentication
+              onSuccess={handlePaymentComplete}
+              onError={handlePaymentError}
+            />
+            <button 
+              className="cancel-button"
+              onClick={() => setShowPayment(false)}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

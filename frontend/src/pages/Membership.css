@@ -21,9 +21,6 @@
   position: relative;
 }
 
-
-
-
 .membership-hero h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -268,4 +265,73 @@
   .membership-section h2 {
     color: #f9fafb;
   }
+}
+
+/* Payment Modal Styles */
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.payment-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.payment-modal-content h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.payment-modal-content p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+.cancel-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Payment Button Styles */
+.payment-button {
+  padding: 12px 25px;
+  background-color: #3399cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  margin: 10px 0;
+}
+
+.payment-button:hover {
+  background-color: #2980b9;
 } 
